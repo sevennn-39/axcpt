@@ -3,8 +3,10 @@ alert("The following is a version of the AX-CPT! The instructions are simple: pr
 
 const display = document.querySelector("#display-screen");
 const scoreDisplay = document.querySelector("#score-display");
-const letters = ["N", "F", "X", "Y", "A", "B", "C", "X", "D", "M", "U", "X", ];
-const delayBetweenLetters = 2000;
+const letters = ["N", "F", "X", "Y", "A", "B", "C", "X", "D", "M", "U", "X", "N" ];
+const letterDuration = 400;
+const blankDuration = 700;
+const delayBetweenLetters = letterDuration + blankDuration;
 const pressCounts = new Map(letters.map((letter) => [letter, 0]));
 const results = document.querySelector("#results");
 const resultsBody = document.querySelector("#results-body");
@@ -13,20 +15,31 @@ let sequenceComplete = false;
 
 display.textContent = currentLetter;
 
+setTimeout(() => {
+    currentLetter = null;
+    display.textContent = "";
+}, letterDuration);
+
 document.addEventListener("keydown", (event) => {
-    if (event.code !== "Space" || event.repeat || sequenceComplete) {
-        return;
+if (event.code !== "Space" || event.repeat || sequenceComplete || currentLetter === null) {
+    return;
     }
 
     event.preventDefault();
     score += 1;
     pressCounts.set(currentLetter, pressCounts.get(currentLetter) + 1);
+
 });
 
 letters.slice(1).forEach((letter, index) => {
     setTimeout(() => {
         currentLetter = letter;
         display.textContent = letter;
+
+        setTimeout(() => {
+            currentLetter = null;
+            display.textContent = "";
+        }, letterDuration);
     }, (index + 1) * delayBetweenLetters);
 });
 

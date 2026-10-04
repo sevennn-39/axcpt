@@ -1,0 +1,35 @@
+body {
+            min-height: 100vh;
+            min-height: 100svh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            background-color: dimgray;
+        }
+
+        #display-screen {
+            font-size: 16rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        #results {
+            text-align: center;
+        }
+
+        #results table {
+            margin: 1rem auto;
+            border-collapse: collapse;
+        }
+
+        #results th,
+        #results td {
+            padding: 0.5rem 1rem;
+            border: 1px solid currentColor;
+        }
+
+        @media (max-width: 600px) {
+            #display-screen {
+                font-size: 10rem;
+            }
+        }
