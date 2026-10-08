@@ -1,9 +1,9 @@
 let score = 0
-alert("The following is a version of the AX-CPT! The instructions are simple: press the space bar every time a letter apprear, UNLESS it's an X. Press OK to continue!");
+alert("The following is a version of the AX-CPT! The instructions are simple: press the space bar every time a letter appears, UNLESS it's an X. Press OK to continue!");
 
 const display = document.querySelector("#display-screen");
 const scoreDisplay = document.querySelector("#score-display");
-const letters = ["N", "F", "X", "Y", "A", "B", "C", "X", "D", "M", "U", "X", "N", "X", "P", "K", "I", "O", "X", "Z", "E", "D", "F", "X", "X", "B", "K", "I", "M", "" ];
+const letters = ["N", "F", "X", "Y", "A", "B", "C", "X", "D", "M", "U", "X", "N", "X", "P", "K", "I", "O", "X", "Z", "E", "D", "F", "X", "X", "B", "K", "I", "M", "X", "O", "N", "Z", "A", "F", "O", "X", "Z", "E", "M", "U,", "G", "A", "L", "O", "X", "V", "U", "I", "P", "M", "E", "F", "X", "O", "J", "T", "L", "G", "U", "H", "L", "I", "A", "X", "B", "Y", "N", "K", "H", "P", "T", "Z", "X", "J", "M", "P", "O", "Y", "U", "L", "Z", "I", "M", "T", "B", "O", "H", "D", "A", "X", "Q", "X", "I", "Z", "Y", "P", "G", "X", "X", "N", "Q", "S", "Z", "H", "X", "P", "L", "A", "U"];
 const letterDuration = 400;
 const blankDuration = 700;
 const delayBetweenLetters = letterDuration + blankDuration;
