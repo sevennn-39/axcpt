@@ -1,5 +1,5 @@
 let score = 0
-alert("The following is a version of the AX-CPT! The instructions are simple: press the space bar every time a letter appears, UNLESS it's an X. Press OK to continue!");
+alert("The following is a version of the AX-CPT! The instructions are simple: press the space bar every time a letter appears, UNLESS it's an X. Press OK to continue, and your results will show up at the end of the test.");
 
 const display = document.querySelector("#display-screen");
 const scoreDisplay = document.querySelector("#score-display");
