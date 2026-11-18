@@ -3,7 +3,7 @@ alert("The following is a version of the AX-CPT! The instructions are simple: pr
 
 const display = document.querySelector("#display-screen");
 const scoreDisplay = document.querySelector("#score-display");
-const letters = ["N", "F", "X", "Y", "A", "B", "C", "X", "D", "M", "U", "X", "N", "X", "P", "K", "I", "O", "X", "Z", "E", "D", "F", "X", "X", "B", "K", "I", "M", "X", "O", "N", "Z", "A", "F", "O", "X", "Z", "E", "M", "U", "G", "A", "L", "O", "X", "V", "U", "I", "P", "M", "E", "F", "X", "O"]
+const letters = ["N", "F", "X", "Y", "A", "B", "C", "X", "D", "M", "U", "X", "N", "X", "P", "K", "I", "O", "X", "Z", "E", "D", "F", "X", "X", "B", "K", "I", "M", "X", "O", "N", "Z", "A", "F", "O", "X", "Z", "E", "M", "U", "G", "A", "L", "O", "X", "V", "U", "I", "P", "M", "E", "F", "X", "O"];
 const blankDuration = 700;
 const delayBetweenLetters = letterDuration + blankDuration;
 const pressCounts = new Map(letters.map((letter) => [letter, 0]));
